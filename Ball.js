@@ -59,7 +59,10 @@ class Ball {
 
     bounceLeftPaddle(paddle) {
         if (this.x - this.r > paddle.w) return SIDE.NONE;
-        if (this.x - this.r < 0) return SIDE.RIGHT; // Someone got a point...
+        if (this.x - this.r < 0) {
+
+            return SIDE.RIGHT;
+        } // Someone got a point...
         if (this.y < paddle.y) return SIDE.NONE;
         if (this.y > paddle.y + paddle.h) return SIDE.NONE;
         if (this.vx < 0) {
@@ -67,6 +70,7 @@ class Ball {
             let paddlePos = (this.y - paddle.y - paddle.h / 2) / paddle.h * 2; // between -1.0 and 1.0
             this.vy = this.vy + paddlePos * paddleSpin;
         }
+
         return SIDE.NONE;
     }
 

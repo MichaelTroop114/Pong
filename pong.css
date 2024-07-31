@@ -1,7 +1,13 @@
+html {
+    background-image: url("./debate.png");
+    color: white;
+}
+
 body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    /* overflow: hidden; */
 }
 
 h1 {
